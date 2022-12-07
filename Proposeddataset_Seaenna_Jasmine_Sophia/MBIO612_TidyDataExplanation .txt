@@ -1,0 +1,23 @@
+Title: Determining optimal nutrients and temperature conditions for algae species utilizing growth and photosynthetic measurements 
+
+Group members: Jasmine Reighard, Seaenna Correa-Garcia, Sophia Hanscom
+
+Dataset tidying 
+
+After tidying our dataset it now meets all requirements for tidy data, of 1) each variable being in its own column, 2) each observation in its own row, and 3) each value having its own cell. 
+
+1. Each variable must have its own column.
+Within this data set there are 9 variables which are the values that measure the same underlying characteristic. The variables in this data set are: date, run, species, treatment, lanai side, temperature(C), salinity (ppt), absorbance(663.8), and absorbance(646.8), found on the header of each column. 
+
+2. Each observation must have its own row.
+The data set has many observations, this is defined as all measurements collected for each individual variable. Each observation is represented in its own row containing data from each variable. 
+
+3. Each value must have its own cell.
+Lastly, in our tidied data set, all data collected is in its own cell. From the original data set, each unit was classified with an “ID” that contained information on the species, the run, and the treatment for that specific unit. In order to meet this standard, we had to split the data so that each characteristic of the data ID could be found on its own cell. This is found in the column header “Species” and “Treatment”. 
+
+Honorable mention: Observational unit forms a table
+Another rule for tidying data is not explicitly stated within Chapter 12 of R for Data Science book but in the publication in the Journal of Statistical Software. This standard being “each type of observational unit forms a table”. From our original data set, absorbance and growth data were found on the same table. This data was separated into two tibbles, “absorbdata” and “growthdata”.
+
+
+FAIR Principles
+We ensured our dataset complies with the FAIR principles. The dataset will be findable through the use of a consistent file name “MBIO612_Datasetproposal_Tidy_AlgaeGrowth_AbsorbanceData“, which distinctly states what the focus of the data is. The original dataset, along with our tidy version, will be uploaded onto Github, a public domain used to publish and download repositories containing fellow users' data and notebooks, as a public repository. Since Github allows the user to download the files located in repositories and converted to fit their personal software system (e.g., Jupyter Notebook or R Studio. This ability to share the data and information between users regardless of their equipment allows our dataset to be interoperable. Additionally, our dataset contains descriptions of why specific codes were used and what they are addressing. Our data uses standard units that allows anyone to understand and compute the information. Releasing both the untidy and tidied versions of our dataset allows anyone to access the data or use it for their own analysis, separate from our process. When the dataset is published it will clearly state it is available to public use. Both of these step make this dataset reusable.
